@@ -1,0 +1,19 @@
+{
+  "name": "harry_potter_movie_app",
+  "version": "1.0.0",
+  "description": "A basic movie app for Harry Potter Fans made with Node.JS",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0",
+    "save": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Marc-André Deschamps",
+  "license": "ISC"
+}
