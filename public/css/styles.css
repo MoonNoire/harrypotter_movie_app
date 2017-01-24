@@ -110,7 +110,7 @@ Home Page Posters Styles
 -------------------------------- */
 
 #posters-wrapper {
-	padding-top: 75px;
+	padding-top: 50px;
 }
 .poster {
 	width: 30%;
@@ -498,3 +498,24 @@ Page Not Found Template Styles
   font-size: 1.20em;
   letter-spacing: 0.4px;
 }
+
+/*custom M-A*/
+.dInlB{display: inline-block;}
+#close-filters{display: none; font-size: 27px;  line-height: 15px; padding-left: 5px; transition: all 0.2s ease-in-out; cursor: pointer; background: white;padding: 13px;top: 70px; left: 330px;position: absolute;}
+#close-filters:hover{color:#cb3737;}
+.grayBtn{ display: block;text-align: center; margin: 0 auto; background: none;color: gray;    border-radius: 30px;   padding: 10px;    margin-top: 30px;   border: 1px solid gainsboro;transition: all 0.2s ease-in-out;}
+.grayBtn:hover{color:black; border:1px solid black;}
+.grayBtn:focus { outline:0 !important; }
+.grayBtn2{margin: 0 auto; text-align: center; background: none;width: 100%;   font-size: 11px;    margin-top: 10px;border: 1px solid gainsboro;   color: gray; transition: all 0.2s ease-in-out;}
+.grayBtn2:hover{color:black; border:1px solid black;}
+.grayBtn2:focus { outline:0 !important; }
+.lesFiltres{display: none;}
+
+.animateNg {
+  -webkit-transition: 1s;
+}
+
+.animateNg.ng-enter,.animateNg.ng-leave{transition: all 0.3s ease-in-out;}
+.animateNg.ng-enter.ng-enter-active{opacity:1;}
+.animateNg.ng-leave.ng-leave-active{opacity:0;}
+.animateNg.ng-enter{opacity: 0;}

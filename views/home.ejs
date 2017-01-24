@@ -3,12 +3,37 @@
 <head>
     <% include partials/head.ejs %>
 </head>
-<body>
+
+<body ng-app="app" ng-controller="mainController">
  <% include partials/header.ejs %>
     <div id="hero-image">
-    	<h1 id="hero-title"><%= title %></h1>
+    	<h1 id="hero-title"><%= title %><br>
+        <button id="show-filters" class="grayBtn"><i class="fa fa-filter" aria-hidden="true"></i> search filter</button> <i id="close-filters" class="fa fa-times flR" aria-hidden="true"></i>
+        <div class="lesFiltres"> 
+            <input ng-model="letters" id="letters" class="text-center " placeholder="By title..." style="display: block; margin: 0 auto; padding: 10px;  border: none;  border-bottom: 1px solid black; margin-top: 30px; "> 
+             <button ng-click="clearFilter()" class="grayBtn2">clear filter</button>   
+        </div>
+        </h1> 
+    </div> 
+    
+   
+    <!--version angular-->
+    <div id="posters-wrapper" class="content-padding clearfix"> 
+            <div  ng-repeat="movie in filteredItems =(movies| filter:letters)" class="poster animateNg">
+                <a href="/movies/{{ movie.episode_number }}">
+                 <img src="/images/{{ movie.poster }}" class="img-responsive">
+                </a>
+                <div class="poster-info-overlay">
+                    <h3>{{ movie.title }}</h3>
+                    <h4>view more <i class="fa fa-arrow-right"></i></h4>
+                </div>
+            </div>
+           <div ng-if="filteredItems.length === 0">No result found</div>
+        
     </div>
-    <div id="posters-wrapper" class="content-padding clearfix">
+
+
+    <!-- VERSION EJS <div id="posters-wrapper" class="content-padding clearfix">
 	    <% for(var i=0 ; i<movies.length; i++){ %>
 	    	<div class="poster">
                 <a href="/movies/<%= movies[i].episode_number %>">
@@ -20,7 +45,7 @@
                 </div>
 	    	</div>
 	    <% } %>
-    </div>
+    </div>  -->
     <% include partials/footer.ejs %> 
     <% include partials/scripts.ejs %> 
 </body>

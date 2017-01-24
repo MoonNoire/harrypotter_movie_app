@@ -4,9 +4,13 @@
   "description": "A basic movie app for Harry Potter Fans made with Node.JS",
   "main": "app.js",
   "dependencies": {
+    "angular": "^1.6.1",
+    "angular-animate": "^1.6.1",
+    "bower": "^1.8.0",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "nodemon": "^1.11.0",
+    "require.all": "^2.0.3",
     "save": "^2.3.0"
   },
   "devDependencies": {},
